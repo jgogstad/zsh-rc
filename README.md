@@ -8,28 +8,28 @@ ZSH plugin for working with RC branches. Typically useful in the following workf
 * A branch suffix of "-rc" signals to CI that it should produce an artifact for the branch
 
 ```
- git checkout -b feature/foo
+> git checkout -b feature/foo
 Switched to a new branch 'feature/foo'
 
 # Easily switch back and forth, RC branch will be created if it doesn't exists
- rc
+> rc
 Switched to a new branch 'feature/foo-rc'
 
- rc
+> rc
 Switched to branch 'feature/foo'
 
 # RC branch will always be hard reset to non-rc branch
- git commit --allow-empty -m "Foo"
+> git commit --allow-empty -m "Foo"
 [feature/foo bf6d376] Foo
 
- rc
+> rc
 Switched to branch 'feature/foo-rc'
 HEAD is now at bf6d376 Foo
 ```
 
 ## Installation
 
-*****Antibody**
+**Antibody**
 
 ```
 antibody bundle jgogstad/zsh-rc
